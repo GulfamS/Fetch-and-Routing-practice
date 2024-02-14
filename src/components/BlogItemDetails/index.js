@@ -4,7 +4,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
 class BlogItemDetails extends Component {
-  state = {blogsData: {}, isLoading: true}
+  state = {blogData: {}, isLoading: true}
 
   componentDidMount() {
     this.getBlogItemData()
@@ -23,11 +23,11 @@ class BlogItemDetails extends Component {
       avatarUrl: data.avatar_url,
       author: data.author,
     }
-    this.setState({blogsData: updatedData, isLoading: false})
+    this.setState({blogData: updatedData, isLoading: false})
   }
   renderBlogItemDetails = () => {
-    const {blogsData} = this.state
-    const {title, imageUrl, content, avatarUrl, author} = blogsData
+    const {blogData} = this.state
+    const {title, imageUrl, content, avatarUrl, author} = blogData
 
     return (
       <div className="blog-info">
